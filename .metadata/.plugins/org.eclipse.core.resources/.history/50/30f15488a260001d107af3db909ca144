@@ -1,0 +1,12 @@
+package myclass.contoller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class HelloController {
+
+	 public void test() {
+		 System.out.println("요청 받음");
+	 }
+	
+}

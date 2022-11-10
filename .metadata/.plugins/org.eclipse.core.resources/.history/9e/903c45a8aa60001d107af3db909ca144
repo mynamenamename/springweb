@@ -1,0 +1,5 @@
+package myclass.model;
+
+public class MemberVO {
+
+}

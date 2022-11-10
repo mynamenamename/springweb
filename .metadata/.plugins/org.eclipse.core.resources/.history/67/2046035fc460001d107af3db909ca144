@@ -1,0 +1,9 @@
+package myclass.model;
+
+import java.util.List;
+
+public class MemberVOList {
+
+	List<MemberVO> list;
+	
+}
