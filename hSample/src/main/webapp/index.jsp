@@ -8,7 +8,11 @@
 </head>
 <body> 
 
-<a href='sample.do'>시작</a>
+<a href='sample.do'>시작</a><hr/>
+
+<a href='empSelect.do'>EMP 검색1</a> <br/>
+
+<a href='empDept.do'>EMP 검색2</a> <br/>
 
 </body>
 </html>

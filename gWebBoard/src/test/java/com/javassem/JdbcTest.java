@@ -1,4 +1,4 @@
-package com.javassem.basic;
+package com.javassem;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

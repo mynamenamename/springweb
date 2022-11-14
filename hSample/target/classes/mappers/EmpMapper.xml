@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="EmpDao">
+
+<select id="empSelect" resultType="sample.javaclass.basic.domain.EmpVO">
+
+SELECT *
+FROM emp 
+
+</select>
+
+<!-- ************************************
+조인인 경우: resultType="hashmap"               
+[참고] mybatis 자료형: int, string, hashmap ... -->
+
+<select id="empDept" resultType="hashmap">
+
+SELECT e.empno AS empno,
+       e.ename AS ename,
+       d.dname AS dname
+FROM emp e INNER JOIN dept d
+ON e.deptno = d.deptno 
+
+</select>
+
+</mapper>
+
+ 
+
+
+<!--  EmpMapper.xml -->
