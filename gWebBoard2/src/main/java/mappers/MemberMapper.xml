@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="user">
+    <!-- 이 id는 memeberdaoimple에서 따온거 -->
+ <insert id="userInsert" parameterType="MemberVO">  <!-- root-con에서 별칭 설정해서 이렇게 쓸 수 있음 -->
+ INSERT INTO member (userId, userPass, userName) VALUES (#{userId}, #{userPass}, #{userName})
+                     <!-- 요기는 노상관  -->                    <!-- 여기를 memberVO에서 가져오기 -->
+ </insert>
+ 
+ 
+ <select id="idCheck" parameterType="MemberVO" resultType="MemberVO">
+ SELECT * 
+ FROM member
+ WHERE userId = #{userId} 
+  <if test="userPass != null">  <!-- 동적태그.... -->
+ and userPass=#{userPass}
+  </if> 
+ </select>
+ 
+</mapper>
